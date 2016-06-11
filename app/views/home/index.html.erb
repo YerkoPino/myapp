@@ -1,0 +1,31 @@
+<%= render "layouts/navbar" %>
+
+<h1>Hola</h1>
+<%  if @nombre.nil? %>
+	<h3>Mundo</h3>
+<% else %>
+	<%= @nombre %>
+<% end %>
+
+<p>párrafo</p>
+<p><strong>Párrafo negrita</strong></p>
+<!-- Comentario -->
+<hr/>
+
+<ul>
+	<li>2</li>
+	<li>1</li>
+</ul>
+
+<hr/>
+
+<ul>
+	<% @people.each do |person| %>
+		<li><strong><%= person.name %></strong></li>
+	<% end %>
+</ul>
+
+<%= link_to 'People', people_path %><br/>
+<%= link_to 'Posts', posts_path %><br/>
+
+<%= image_tag 'Tiamat_Ilustración.png' %>
